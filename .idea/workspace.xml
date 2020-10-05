@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13bdf36c-285e-4af3-9a91-c6bd290c79b0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1iOrvHbT1U8gu3E70BDctY8aUGT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\osiel\Desktop\Compilador\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main (3)">
+    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI" />
+      <module name="Compilador" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="analizador2.Main" />
+      <module name="Compilador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="analizador2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ehhCabeza.Main" />
+      <module name="Compilador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ehhCabeza.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="compilador.Main" />
+      <module name="Compilador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="compilador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Compilador" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GUI" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13bdf36c-285e-4af3-9a91-c6bd290c79b0" name="Default Changelist" comment="" />
+      <created>1601789710079</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601789710079</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601856338504">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601856338504" />
+    <state width="1493" height="144" key="GridCell.Tab.0.bottom" timestamp="1601868735863">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="144" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601868735863" />
+    <state width="1493" height="144" key="GridCell.Tab.0.center" timestamp="1601868735862">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="144" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601868735862" />
+    <state width="1493" height="144" key="GridCell.Tab.0.left" timestamp="1601868735862">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="144" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601868735862" />
+    <state width="1493" height="144" key="GridCell.Tab.0.right" timestamp="1601868735863">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="144" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601868735863" />
+    <state width="1493" height="142" key="GridCell.Tab.1.bottom" timestamp="1601855914918">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="142" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601855914918" />
+    <state width="1493" height="142" key="GridCell.Tab.1.center" timestamp="1601855914918">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="142" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601855914918" />
+    <state width="1493" height="142" key="GridCell.Tab.1.left" timestamp="1601855914918">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="142" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601855914918" />
+    <state width="1493" height="142" key="GridCell.Tab.1.right" timestamp="1601855914918">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="142" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601855914918" />
+  </component>
+</project>

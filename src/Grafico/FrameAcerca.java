@@ -67,7 +67,7 @@ public class FrameAcerca extends JDialog {
             areaDeTexto.setOpaque(false);
             areaDeTexto.setText("2019 Version 1.0 Software compilador de texto\nCompilador desarrollado por estudiantes "
                     + "pertenecientes\nal Insituto Tecnólogico de Culiacán,\nse prohibe su venta y distribucion."
-                    + "\n\n\n\n\nAutores :\n* Contreras Avendaño Carlos Daniel\n* García Rubio Mauricio");
+                    + "\n\n\n\n\nAutores :\n* Campos Medina Francisco Daniel\n* Sainz Aguilar Oscar Osiel");
             areaDeTexto.setFont(fuenteAreaTexto);
             
             areaDeTexto.setEditable(false);

@@ -1,5 +1,2 @@
-public class{
-	int a1
-	char b1
-	boolean a1
+public class hola{
 }

@@ -1,16 +1,15 @@
 package compilador;
 
-import java.awt.Color;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import compilador.Analizadores.AnalizadorLexico;
+import compilador.Analizadores.AnalizadorSemantico;
+import compilador.Analizadores.AnalizadorSintactico;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.RoundRectangle2D;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -24,50 +23,48 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 
-public class CompiladorFrame extends JFrame implements ActionListener {
+public class CompiladorView extends JFrame{
 
     public static JTextArea area, consola;
-    private JButton btnCompilar, btnAbrir, btnTablaSimbolos, btnCerrar;
+    public JButton btnCompilar, btnAbrir, btnTablaSimbolos, btnCerrar;
 
-    public CompiladorFrame() {
+    public CompiladorView() {
         hazInterfaz();
     }
 
     private void hazInterfaz() {
         setLayout(null);
         setUndecorated(true);
-        setSize(500, 700);
+        setSize(1000, 800);
         setLocationRelativeTo(null);
-        setShape(new RoundRectangle2D.Double(0, 0, 500, 700, 20, 20));
+        //setShape(new RoundRectangle2D.Double(0, 0, 500, 700, 20, 20));
 
         PanelGradiente panel = new PanelGradiente();
-        panel.setBounds(0, 0, 500, 700);
+        panel.setBounds(0, 0, 1000, 800);
 
         area = new JTextArea();
+        area.setFont(new Font("Consolas", Font.BOLD, 18));
+
         consola = new JTextArea();
         consola.setEnabled(false);
         consola.setDisabledTextColor(Color.BLACK);
         btnCompilar = new JButton("Compilar");
         btnCompilar.setBounds(40, 5, 100, 40);
-        btnCompilar.addActionListener(this);
 
         btnAbrir = new JButton("Abrir archivo");
         btnAbrir.setBounds(150, 5, 100, 40);
-        btnAbrir.addActionListener(this);
 
         btnTablaSimbolos = new JButton("Tabla de simbolos");
         btnTablaSimbolos.setBounds(263, 5, 150, 40);
-        btnTablaSimbolos.addActionListener(this);
 
         btnCerrar = new JButton("X");
-        btnCerrar.setBounds(440, 5, 40, 40);
-        btnCerrar.setBackground(Color.decode("#65417A"));
-        btnCerrar.addActionListener(this);
+        btnCerrar.setBounds(940, 5, 40, 40);
+        btnCerrar.setBackground(new Color(127, 30, 22));
 
         JScrollPane scrollPaneArea = new JScrollPane(area);
-        scrollPaneArea.setBounds(30, 50, 440, 300);
+        scrollPaneArea.setBounds(30, 50, 940, 390);
         JScrollPane scrollPaneConsola = new JScrollPane(consola);
-        scrollPaneConsola.setBounds(30, 350, 440, 330);
+        scrollPaneConsola.setBounds(30, 450, 940, 330);
 
         add(scrollPaneArea);
         add(scrollPaneConsola);
@@ -79,43 +76,7 @@ public class CompiladorFrame extends JFrame implements ActionListener {
         setVisible(true);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-        if (e.getSource() == btnCerrar) {
-            System.exit(0);
-        }
-
-        if (e.getSource() == btnCompilar) {
-            generarArchivo();
-            compilar();
-            return;
-        }
-
-        if(e.getSource() == btnTablaSimbolos){
-
-
-        }
-
-        JFileChooser chooser = new JFileChooser();
-        int opcion = chooser.showSaveDialog(this);
-        if (opcion == JFileChooser.APPROVE_OPTION) {
-            File f = chooser.getSelectedFile();
-
-            try {
-                BufferedReader br = new BufferedReader(new FileReader(f));
-                String lineaActual;
-                while ((lineaActual = br.readLine()) != null) {
-                    area.append(lineaActual + "\n");
-                }
-            } catch (Exception e1) {
-                e1.printStackTrace();
-            }
-        }
-
-    }
-
-    private void generarArchivo() {
+    public void generarArchivo() {
         String ruta = "codigo.txt";
         File archivo = new File(ruta);
         BufferedWriter bw;
@@ -129,7 +90,7 @@ public class CompiladorFrame extends JFrame implements ActionListener {
         }
     }
 
-    private void compilar() {
+    public void compilar() {
         if (area.getText().trim().equals("")) {
             JOptionPane.showMessageDialog(this, "Favor de escribir su código");
             area.requestFocus();
@@ -163,10 +124,10 @@ public class CompiladorFrame extends JFrame implements ActionListener {
         @Override
         public void paint(Graphics g) {
             Graphics2D g2 = (Graphics2D) g;
-            g2.setPaint(new Color(56, 56, 56 ));
+            g2.setPaint(new Color(23, 30, 36  ));
             g2.fillRect(0, 0, getWidth(), 50);
-            g2.setPaint(new Color(105, 105, 105));
-            g2.fillRect(0, 50, getWidth(), 670);
+            g2.setPaint(new Color(28, 42, 53));
+            g2.fillRect(0, 50, getWidth(), 800);
         }
     }
 

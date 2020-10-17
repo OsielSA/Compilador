@@ -1,4 +1,6 @@
-package compilador;
+package compilador.Analizadores;
+
+import compilador.TablaSimbolo;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -6,7 +8,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class AnalizadorSemantico {
-    private HashMap<String,TablaSimbolo> tablaSimbolos;
+    private HashMap<String, TablaSimbolo> tablaSimbolos;
     private ArrayList<String> listaErroresSemanticos;
 
     public AnalizadorSemantico(String texto){

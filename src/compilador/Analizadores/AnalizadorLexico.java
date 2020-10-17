@@ -1,4 +1,6 @@
-package compilador;
+package compilador.Analizadores;
+
+import compilador.Token;
 
 import java.io.*;
 import java.lang.reflect.Array;

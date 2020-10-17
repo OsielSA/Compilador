@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) throws UnsupportedLookAndFeelException {
         UIManager.setLookAndFeel(new NimbusLookAndFeel());
-        new CompiladorFrame();
+        CompiladorView v = new CompiladorView();
+        Controller c = new Controller(v);
     }
 }

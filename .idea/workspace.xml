@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13bdf36c-285e-4af3-9a91-c6bd290c79b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/codigo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/AnalizadorSintactico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compilador/compilador/AnalizadorSintactico.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorFrame$PanelGradiente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorFrame$PanelGradiente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilador/AnalizadorSintactico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/AnalizadorSintactico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilador/CompiladorFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/CompiladorFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/AnalizadorLexico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/AnalizadorSemantico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/AnalizadorSintactico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorFrame$PanelGradiente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilador/AnalizadorLexico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/Analizadores/AnalizadorLexico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilador/AnalizadorSemantico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/Analizadores/AnalizadorSemantico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilador/AnalizadorSintactico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/Analizadores/AnalizadorSintactico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilador/CompiladorFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/CompiladorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilador/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
@@ -75,22 +82,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="compilador.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Compilador" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="compilador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="compilador.Main" />
       <module name="Compilador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="compilador.Analizadores.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,30 +130,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601856338504" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1602964889833">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602964889833" />
     <state x="499" y="162" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1602916991252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602916991252" />
-    <state width="1493" height="142" key="GridCell.Tab.0.bottom" timestamp="1602922760115">
+    <state width="1493" height="142" key="GridCell.Tab.0.bottom" timestamp="1602966513503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602918502192" />
-    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602922760115" />
-    <state width="1493" height="142" key="GridCell.Tab.0.center" timestamp="1602922760115">
+    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
+    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602966513503" />
+    <state width="1493" height="142" key="GridCell.Tab.0.center" timestamp="1602966513502">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602918502192" />
-    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602922760115" />
-    <state width="1493" height="142" key="GridCell.Tab.0.left" timestamp="1602922760115">
+    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
+    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602966513502" />
+    <state width="1493" height="142" key="GridCell.Tab.0.left" timestamp="1602966513502">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602918502192" />
-    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602922760115" />
-    <state width="1493" height="142" key="GridCell.Tab.0.right" timestamp="1602922760115">
+    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
+    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602966513502" />
+    <state width="1493" height="142" key="GridCell.Tab.0.right" timestamp="1602966513502">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602918502192" />
-    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602922760115" />
+    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
+    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602966513502" />
     <state width="1493" height="142" key="GridCell.Tab.1.bottom" timestamp="1601871586944">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -167,9 +178,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="418" y="30" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602918681021" />
-    <state x="944" y="115" width="565" height="639" key="dock-window-1" timestamp="1602921701528">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1913" y="-17" width="1272" height="641" maximized="true" key="dock-window-1" timestamp="1602963400380">
+      <screen x="1920" y="0" width="1366" height="728" />
     </state>
+    <state x="1913" y="-17" width="1272" height="641" maximized="true" key="dock-window-1/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602963400380" />
     <state x="944" y="115" width="565" height="639" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1602921701528" />
   </component>
 </project>

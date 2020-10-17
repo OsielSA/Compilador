@@ -1,4 +1,7 @@
-package compilador;
+package compilador.Analizadores;
+
+import compilador.CompiladorView;
+import compilador.Token;
 
 import java.util.ArrayList;
 
@@ -20,7 +23,7 @@ public class AnalizadorSintactico {
             this.token = this.tokenRC.get(0).getToken();
             this.tipo = this.tokenRC.get(0).getTipo();
         } catch (Exception e) {
-            CompiladorFrame.consola.append("El archivo está vacío");
+            CompiladorView.consola.append("El archivo está vacío");
         }
         analizar();
     }
@@ -283,11 +286,11 @@ public class AnalizadorSintactico {
             hayErrores = true;
         }
 
-        CompiladorFrame.consola.append(tipo);
+        CompiladorView.consola.append(tipo);
     }
 
     public void error() {
-        CompiladorFrame.consola.append("Error en la sintaxis, con el siguiente token ** " + token + " ** en linea ** "
+        CompiladorView.consola.append("Error en la sintaxis, con el siguiente token ** " + token + " ** en linea ** "
                 + tokenRC.get(contando).getRenglon() + " **, No. de token ** " + tokenRC.get(contando).getColumna()
                 + " **");
     }

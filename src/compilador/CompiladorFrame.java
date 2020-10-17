@@ -94,7 +94,7 @@ public class CompiladorFrame extends JFrame implements ActionListener {
 
         if(e.getSource() == btnTablaSimbolos){
 
-            
+
         }
 
         JFileChooser chooser = new JFileChooser();
@@ -145,10 +145,15 @@ public class CompiladorFrame extends JFrame implements ActionListener {
             consola.append(erroresLexicos.get(i) + "\n");
         }
 
-        AnalizadorSintactico analizadorSintactico;
+        AnalizadorSintactico analizadorSintactico = null;
         if (!analizadorLexico.getHayErrores()) {
             analizadorSintactico = new AnalizadorSintactico(analizadorLexico.getTokenRC());
         }
+
+        AnalizadorSemantico analizadorSemantico;
+        //if (!analizadorSintactico.getHayErrores()){
+            analizadorSemantico = new AnalizadorSemantico(area.getText());
+        //}
     }
 
     class PanelGradiente extends JPanel {

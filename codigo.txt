@@ -1,0 +1,5 @@
+public class{
+	int a1
+	char b1
+	boolean a1
+}

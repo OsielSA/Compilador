@@ -3,7 +3,7 @@ package compilador;
 import java.util.ArrayList;
 
 public class AnalizadorSintactico {
-
+    private boolean hayErrores = false;
     private ArrayList<Token> tokenRC;
     private String token = "", esperado = "";
     private int tipo, contando = 0, flag = 0;
@@ -261,21 +261,26 @@ public class AnalizadorSintactico {
         String tipo = checarValoresInversos(type);
         if (type == 0) {
             tipo = "\nError sintáctico, se esperaba una expresión *class* al comienzo";
+            hayErrores = true;
         } else if (type == 1) {
             tipo = "\nError sintáctico en los límites, se encontró al menos un token después de la última llave cerrada, token ** "
                     + token + " ** en linea ** " + tokenRC.get(contando).getRenglon() + " **, No. de token ** "
                     + tokenRC.get(contando).getColumna() + " **";
+            hayErrores = true;
         } else if (type == 2) {
             tipo = "\nError sintáctico en asignación, se esperaba un operador y operando antes de ** " + token
                     + " ** en linea ** " + tokenRC.get(contando).getRenglon() + " **, No. de token ** "
                     + tokenRC.get(contando).getColumna() + " **";
+            hayErrores = true;
         } else if (type == 3) {
             tipo = "\nError sintáctico en validación, se esperaba un operador lógico en lugar de ** " + token
                     + " ** en linea ** " + tokenRC.get(contando).getRenglon() + " **, No. de token ** "
                     + tokenRC.get(contando).getColumna() + " **";
+            hayErrores = true;
         } else {
             tipo = "\nError sintáctico en token ** " + token + " ** se esperaba un token ** "
                     + tipo + " **";
+            hayErrores = true;
         }
 
         CompiladorFrame.consola.append(tipo);
@@ -321,5 +326,10 @@ public class AnalizadorSintactico {
             return "identificador";
         }
         return cadenas[tipo];
+    }
+
+
+    public boolean getHayErrores() {
+        return hayErrores;
     }
 }

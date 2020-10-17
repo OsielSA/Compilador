@@ -3,7 +3,88 @@
   <component name="ChangeListManager">
     <list default="true" id="13bdf36c-285e-4af3-9a91-c6bd290c79b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grafico/FrameAcerca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grafico/FrameAcerca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Formato/DocumentoConsola$coloreado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Formato/DocumentoConsola.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Formato/DocumentoWorkspace$coloreado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Formato/DocumentoWorkspace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Formato/Formato.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Grafico/FrameAcerca$PanelAcerca.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Grafico/FrameAcerca.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Grafico/ModeloTabla.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Grafico/Ventana$Oyente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Grafico/Ventana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Grafico/WorkSpace$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Grafico/WorkSpace$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Grafico/WorkSpace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/abrir-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/abrir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/consola-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/consola.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/copiar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/cortar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/ejecutar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/ejecutar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/guardar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/guardar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/hoja.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/icono-96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/info-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/nuevo-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/nuevo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/pegar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/salir-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/salir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/table-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/Imagenes/tec_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compilador/compilador/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/utils/Analizador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/utils/Archivo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/utils/Identificador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/utils/Lexer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/utils/Lista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/utils/Nodo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/utils/PRUEBA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/utils/Parser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Compilador/utils/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formato/DocumentoConsola.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formato/DocumentoWorkspace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formato/Formato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grafico/FrameAcerca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grafico/ModeloTabla.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grafico/Ventana.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grafico/WorkSpace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/abrir-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/abrir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/consola-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/consola.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/copiar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/cortar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/ejecutar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/ejecutar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/guardar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/guardar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/hoja.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/icono-96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/info-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/nuevo-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/nuevo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/pegar-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/salir-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/salir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/table-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imagenes/tec_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilador/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Analizador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Archivo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Identificador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Lexer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Lista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Nodo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/PRUEBA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Token.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +103,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -110,37 +192,41 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601856338504" />
-    <state width="1493" height="144" key="GridCell.Tab.0.bottom" timestamp="1601868735863">
+    <state width="1493" height="142" key="GridCell.Tab.0.bottom" timestamp="1602914808774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="144" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601868735863" />
-    <state width="1493" height="144" key="GridCell.Tab.0.center" timestamp="1601868735862">
+    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602914808774" />
+    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602914063921" />
+    <state width="1493" height="142" key="GridCell.Tab.0.center" timestamp="1602914808774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="144" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601868735862" />
-    <state width="1493" height="144" key="GridCell.Tab.0.left" timestamp="1601868735862">
+    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602914808774" />
+    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602914063921" />
+    <state width="1493" height="142" key="GridCell.Tab.0.left" timestamp="1602914808773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="144" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601868735862" />
-    <state width="1493" height="144" key="GridCell.Tab.0.right" timestamp="1601868735863">
+    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602914808773" />
+    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602914063920" />
+    <state width="1493" height="142" key="GridCell.Tab.0.right" timestamp="1602914808774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="144" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601868735863" />
-    <state width="1493" height="142" key="GridCell.Tab.1.bottom" timestamp="1601855914918">
+    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602914808774" />
+    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602914063921" />
+    <state width="1493" height="142" key="GridCell.Tab.1.bottom" timestamp="1601871586944">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601855914918" />
-    <state width="1493" height="142" key="GridCell.Tab.1.center" timestamp="1601855914918">
+    <state width="1493" height="142" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601871586944" />
+    <state width="1493" height="142" key="GridCell.Tab.1.center" timestamp="1601871586943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601855914918" />
-    <state width="1493" height="142" key="GridCell.Tab.1.left" timestamp="1601855914918">
+    <state width="1493" height="142" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601871586943" />
+    <state width="1493" height="142" key="GridCell.Tab.1.left" timestamp="1601871586943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601855914918" />
-    <state width="1493" height="142" key="GridCell.Tab.1.right" timestamp="1601855914918">
+    <state width="1493" height="142" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601871586943" />
+    <state width="1493" height="142" key="GridCell.Tab.1.right" timestamp="1601871586943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601855914918" />
+    <state width="1493" height="142" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601871586943" />
   </component>
 </project>

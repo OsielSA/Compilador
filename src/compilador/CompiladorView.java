@@ -45,9 +45,11 @@ public class CompiladorView extends JFrame{
         area = new JTextArea();
         area.setFont(new Font("Consolas", Font.BOLD, 18));
 
+
         consola = new JTextArea();
         consola.setEnabled(false);
         consola.setDisabledTextColor(Color.BLACK);
+
         btnCompilar = new JButton("Compilar");
         btnCompilar.setBounds(40, 5, 100, 40);
 

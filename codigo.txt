@@ -1,2 +1,5 @@
-public class hola{
+public class hola {
+	int a1
+	kaka b1
+	a1 = a1 + b1
 }

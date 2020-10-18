@@ -2,7 +2,9 @@ package compilador;
 
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
+import java.awt.*;
 
 public class Main {
 

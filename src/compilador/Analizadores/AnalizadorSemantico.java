@@ -11,11 +11,39 @@ public class AnalizadorSemantico {
     private HashMap<String, TablaSimbolo> tablaSimbolos;
     private ArrayList<String> listaErroresSemanticos;
 
+    private ArrayList<String> operadoresaritmeticos; //Llenarlos
+    private ArrayList<String> operadoreslogicos;//Llenarlos
+
     public AnalizadorSemantico(String texto){
         listaErroresSemanticos = new ArrayList<String>();
         tablaSimbolos = new HashMap<>();
+        llenarListasOperadores();
         ejecutarAnalisisSemantico(texto);
     }
+
+    private void llenarListasOperadores() {
+        operadoresaritmeticos = new ArrayList<>();
+        operadoreslogicos = new ArrayList<>();
+        //Operadores Aritméticos
+        operadoresaritmeticos.add("+");
+        operadoresaritmeticos.add("-");
+        operadoresaritmeticos.add("*");
+        operadoresaritmeticos.add("/");
+        operadoresaritmeticos.add("%");
+
+        //Operadores Lógicos
+        operadoreslogicos.add("||");
+        operadoreslogicos.add("&&");
+        operadoreslogicos.add("!");
+        operadoreslogicos.add("==");
+        operadoreslogicos.add("<=");
+        operadoreslogicos.add(">=");
+        operadoreslogicos.add("!=");
+        operadoreslogicos.add(">");
+        operadoreslogicos.add("<");
+        operadoreslogicos.add("");
+    }
+
     public void ejecutarAnalisisSemantico(String texto){
         String [] listaRenglones;
         listaRenglones = texto.split("\n");
@@ -95,7 +123,14 @@ public class AnalizadorSemantico {
         StringTokenizer tokens = new StringTokenizer(aux);
         while(tokens.hasMoreTokens()){
             String token = tokens.nextToken();
-            if(!(token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/") || token.equals("%"))) {
+
+            boolean isOperador = false;
+            if(operadoresaritmeticos.contains(token))
+                isOperador = true;
+            if(operadoreslogicos.contains(token))
+                isOperador = true;
+
+            if(!(isOperador)) {
                 if(token.substring(0,1).equals("\'") && token.substring(token.length()-1).equals("\'") && token.length() <= 3){
                     System.out.println("Es char: " + token);
                     listaConstantes.add("char");
@@ -117,7 +152,6 @@ public class AnalizadorSemantico {
                             listaConstantes.add("float");
                         }
                     }catch (Exception e){
-                        System.out.println("No es constante: " + token);
                         operandos.add(token);
                     }
                 }
@@ -137,12 +171,11 @@ public class AnalizadorSemantico {
             }
         }
         validarTipodeDatosOperandos(atributoSimbolos, numeroRenglon);
-
         //validarTipodeDatosCostantes(atributoSimbolos, );
+        validarTipoOperadores(atributoSimbolos, operadores, numeroRenglon);
         /*-
             -Termina iteración
             -Mandar llamar la funcion validarTipodeDatosCostantes enviandole la lista de los atributos.
-            -Mandar llamar la función validarTipoOperadores enviandole la lista de atributos.
         */
 
     }
@@ -174,6 +207,32 @@ public class AnalizadorSemantico {
             -Si no existe
                 -Grabar en la tabla de errores que hay inconcistencias entre tipos.
         */
+    }
+
+    public void validarTipoOperadores(ArrayList<TablaSimbolo> atributo, ArrayList<String> operadoresRenglon, int numeroRenglon){
+        String tipo = atributo.get(0).getTipo();
+        if(tipo.equals("boolean")){ //Lógico
+            for (int i=0; i<operadoresRenglon.size() ; i++) {
+                if(!operadoreslogicos.contains(operadoresRenglon.get(i))) {
+                    String error = "El operador " + operadoresRenglon.get(i) + " no coincide con  el tipo de dato. Error en la linea: " + numeroRenglon;
+                    listaErroresSemanticos.add(error);
+                    System.out.println(error);
+                    return;
+                }
+            }
+            return;
+        }
+        if(tipo.equals("int") || tipo.equals("float")){
+            for (int i=0; i<operadoresRenglon.size(); i++) {
+                if(!operadoresaritmeticos.contains(operadoresRenglon.get(i))){
+                    String error = "El operador " + operadoresRenglon.get(i) + " no coincide con  el tipo de dato. Error en la linea: " + numeroRenglon;
+                    listaErroresSemanticos.add(error);
+                    System.out.println(error);
+                    return;
+                }
+            }
+            return;
+        }
     }
 
 }

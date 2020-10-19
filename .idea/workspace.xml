@@ -4,10 +4,7 @@
     <list default="true" id="13bdf36c-285e-4af3-9a91-c6bd290c79b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/codigo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/Analizadores/AnalizadorSemantico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compilador/compilador/Analizadores/AnalizadorSemantico.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compilador/Analizadores/AnalizadorSemantico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/Analizadores/AnalizadorSemantico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilador/CompiladorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/CompiladorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compilador/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +72,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="compilador.Main" />
+      <module name="Compilador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="compilador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Compilador" />
@@ -98,10 +108,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.GUI" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.GUI" />
       </list>
     </recent_temporary>
   </component>
@@ -131,42 +141,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602916991252" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1603014572146">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1603068131952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603014572146" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1603014572146">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603068131952" />
+    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1603068131952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603014572146" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1603014572146">
+    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603068131952" />
+    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1603068131952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603014572146" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1603014572146">
+    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603068131952" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1603068131952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603014572146" />
-    <state width="1493" height="192" key="GridCell.Tab.1.bottom" timestamp="1603012232115">
+    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603068131952" />
+    <state width="1493" height="192" key="GridCell.Tab.1.bottom" timestamp="1603016133159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603012232115" />
-    <state width="1493" height="192" key="GridCell.Tab.1.center" timestamp="1603012232115">
+    <state width="1493" height="192" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603016133159" />
+    <state width="1493" height="192" key="GridCell.Tab.1.center" timestamp="1603016133159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603012232115" />
-    <state width="1493" height="192" key="GridCell.Tab.1.left" timestamp="1603012232115">
+    <state width="1493" height="192" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603016133159" />
+    <state width="1493" height="192" key="GridCell.Tab.1.left" timestamp="1603016133159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603012232115" />
-    <state width="1493" height="192" key="GridCell.Tab.1.right" timestamp="1603012232115">
+    <state width="1493" height="192" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603016133159" />
+    <state width="1493" height="192" key="GridCell.Tab.1.right" timestamp="1603016133159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="192" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603012232115" />
+    <state width="1493" height="192" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603016133159" />
     <state x="418" y="30" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603003628446">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -177,6 +187,10 @@
     </state>
     <state x="1913" y="-17" width="1272" height="641" maximized="true" key="dock-window-1/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602963400380" />
     <state x="944" y="115" width="565" height="639" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1602921701528" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1603067453003">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603067453003" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

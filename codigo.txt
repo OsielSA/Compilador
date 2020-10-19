@@ -1,5 +1,6 @@
 public class hola {
 	int a1
-	kaka b1
-	a1 = a1 + b1
+	int a2
+	char b1
+	a1 = a2 < a1
 }

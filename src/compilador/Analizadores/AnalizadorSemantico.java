@@ -118,7 +118,7 @@ public class AnalizadorSemantico {
         ArrayList<TablaSimbolo> atributoSimbolos = new ArrayList<>();
         ArrayList<String> listaConstantes = new ArrayList<>();
 
-        String tipo = "";
+        String tipo = "", valor = null;
         String var = renglon.substring(0, renglon.indexOf('='));
         var = var.replaceAll("\\s","");
         if(tablaSimbolos.containsKey(var)){
@@ -143,19 +143,23 @@ public class AnalizadorSemantico {
             if(!(isOperador)) {
                 if(token.substring(0,1).equals("\'") && token.substring(token.length()-1).equals("\'") && token.length() <= 3){
                     listaConstantes.add("char");
+                    valor = token;
                 }
                 else if(token.equals("true") || token.equals("false")){
                         listaConstantes.add("boolean");
+                        valor = token;
                 }
                 else{
                     try{
                         if(token.indexOf(".") == -1){
                             int aux1 = Integer.parseInt(token);
                             listaConstantes.add("int");
+                            valor = token;
                         }
                         else{
                             float aux2 = Float.parseFloat(token);
                             listaConstantes.add("float");
+                            valor = token;
                         }
                     }catch (Exception e){
                         operandos.add(token);
@@ -171,7 +175,7 @@ public class AnalizadorSemantico {
                 atributoSimbolos.add( obtenerDatosSimbolo(operandos.get(i)) );
             }
             else{
-                String error = "No existe el simbolo. Error en la linea:" + numeroRenglon;
+                String error = "No existe el simbolo ["+operandos.get(i)+"]. Error en la linea:" + numeroRenglon;
                 listaErroresSemanticos.add(error);
                 System.out.println(error);
             }
@@ -181,11 +185,24 @@ public class AnalizadorSemantico {
         if(!atributoSimbolos.isEmpty())
             validarTipoOperadores(atributoSimbolos, operadores, numeroRenglon);
 
+        String tipoAsigando = null;
+        if(tipoOperandos == null)
+            tipoAsigando = tipoConstantes;
+        else
+            tipoAsigando = tipoOperandos;
+
         if(!(tipo.equals(tipoOperandos) || tipo.equals(tipoConstantes))){
-            String error = " .Error en la linea: " + numeroRenglon;
+            String error = "Se intentó asiganar un tipo de dato ["+tipoAsigando+"] en la varibale ["+var+"] de tipo ["+tipo+"]. Error en la linea: " + numeroRenglon;
             listaErroresSemanticos.add(error);
             System.out.println(error);
         }
+        if(listaErroresSemanticos.isEmpty()) {
+            if(valor != null)
+                tablaSimbolos.get(var).setValor(valor);
+            else
+                tablaSimbolos.get(var).setValor("Sin valor");
+        }
+        System.out.println(var+": "+tablaSimbolos.get(var).getValor());
 
     }
 

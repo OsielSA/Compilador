@@ -5,22 +5,15 @@ import compilador.Analizadores.AnalizadorSemantico;
 import compilador.Analizadores.AnalizadorSintactico;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
+import javax.swing.*;
 
 
 public class CompiladorView extends JFrame{
@@ -122,7 +115,53 @@ public class CompiladorView extends JFrame{
     }
 
     public void mostrarTablaSimbolos(){
-        analizadorSemantico.getTablaSimbolos();
+
+        class TablaSimb extends JDialog {
+            private JTable tabla;
+            private HashMap<String,TablaSimbolo> hm;
+            private JScrollPane sPane;
+
+
+            TablaSimb(JFrame padre, HashMap<String,TablaSimbolo> hm) {
+                super(padre,"Tabla de Símbolos",false);
+
+                this.tabla = tabla;
+                this.hm = hm;
+                this.sPane = sPane;
+
+                String [] columnas= {"Símbolo","Tipo","Posición","Valor"};
+                Object[][] datos=  new Object[0][hm.size()];
+                datos= obtenerDatos();
+
+                tabla= new JTable(datos,columnas);
+                tabla.setEnabled(false);
+                add(tabla.getTableHeader(),BorderLayout.PAGE_START);
+                add(tabla,BorderLayout.CENTER);
+                sPane= new JScrollPane(tabla);
+                sPane.setVisible(true);
+                add(sPane);
+
+                setSize(400,300);
+                setLocationRelativeTo(null);
+                setVisible(true);
+            }
+
+            private Object[][] obtenerDatos() {
+                Object [][] datos= new Object[hm.size()][4];
+                int cont=0;
+
+                for(Map.Entry<String,TablaSimbolo> tab: hm.entrySet()) {
+                    datos[cont][0] = tab.getValue().getSimbolo();
+                    datos[cont][1] = tab.getValue().getTipo();
+                    datos[cont][2] = tab.getValue().getPosicion();
+                    datos[cont][3] = tab.getValue().getValor();
+                    cont++;
+                }
+                return datos;
+            }
+        }
+
+        new TablaSimb(this, analizadorSemantico.getTablaSimbolos());
     }
 
     class PanelGradiente extends JPanel {

@@ -37,7 +37,7 @@ public class Controller implements ActionListener {
         }
 
         if(e.getSource() == v.btnTablaSimbolos){
-
+            v.mostrarTablaSimbolos();
             return;
         }
 

@@ -25,6 +25,8 @@ import javax.swing.JTextArea;
 
 public class CompiladorView extends JFrame{
 
+    public AnalizadorSemantico analizadorSemantico;
+
     public static JTextArea area, consola;
     public JButton btnCompilar, btnAbrir, btnTablaSimbolos, btnCerrar;
 
@@ -114,10 +116,13 @@ public class CompiladorView extends JFrame{
             analizadorSintactico = new AnalizadorSintactico(analizadorLexico.getTokenRC());
         }
 
-        AnalizadorSemantico analizadorSemantico;
         //if (!analizadorSintactico.getHayErrores()){
             analizadorSemantico = new AnalizadorSemantico(area.getText());
         //}
+    }
+
+    public void mostrarTablaSimbolos(){
+        analizadorSemantico.getTablaSimbolos();
     }
 
     class PanelGradiente extends JPanel {

@@ -251,4 +251,7 @@ public class AnalizadorSemantico {
         }
     }
 
+    public HashMap<String, TablaSimbolo> getTablaSimbolos() {
+        return tablaSimbolos;
+    }
 }

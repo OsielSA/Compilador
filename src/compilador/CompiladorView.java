@@ -95,22 +95,31 @@ public class CompiladorView extends JFrame{
             return;
         }
 
-        AnalizadorLexico analizadorLexico = new AnalizadorLexico("codigo.txt");
-        ArrayList<String> erroresLexicos = analizadorLexico.getErroresLexicos();
+        //AnalizadorLexico analizadorLexico = new AnalizadorLexico("codigo.txt");
+        //ArrayList<String> erroresLexicos = analizadorLexico.getErroresLexicos();
         
         consola.setText("");
 
-        for (int i = 0; i < erroresLexicos.size(); i++) {
+        /*for (int i = 0; i < erroresLexicos.size(); i++) {
             consola.append(erroresLexicos.get(i) + "\n");
-        }
+        }*/
 
-        AnalizadorSintactico analizadorSintactico = null;
+        /*AnalizadorSintactico analizadorSintactico = null;
         if (!analizadorLexico.getHayErrores()) {
             analizadorSintactico = new AnalizadorSintactico(analizadorLexico.getTokenRC());
-        }
+        }*/
 
         //if (!analizadorSintactico.getHayErrores()){
-            analizadorSemantico = new AnalizadorSemantico(area.getText());
+        analizadorSemantico = new AnalizadorSemantico(area.getText());
+        ArrayList<String> listaErroresSemanticos = analizadorSemantico.getListaErroresSemanticos();
+        if(listaErroresSemanticos.isEmpty())
+            consola.setText(consola.getText() + "No hay errores Semánticos:");
+        else {
+            consola.setText(consola.getText() + "Errores Semánticos:");
+            for (int i = 0; i < listaErroresSemanticos.size(); i++) {
+                consola.setText(consola.getText() + "\n" + listaErroresSemanticos.get(i));
+            }
+        }
         //}
     }
 

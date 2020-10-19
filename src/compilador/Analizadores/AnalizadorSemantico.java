@@ -60,10 +60,6 @@ public class AnalizadorSemantico {
                 validarOperacion(listaRenglones[i], i + 1);
             }
         }
-
-        //-Recorrer/immprimir la tabla de simbolos
-        //-Imprimir los errores
-
     }
 
     public String validarTipoAccion(String renglon) {
@@ -95,7 +91,8 @@ public class AnalizadorSemantico {
             } else {
                 TablaSimbolo simboloAtributos = tablaSimbolos.get(simbolo);
 
-                String error = "Ya existe el simbolo: " + simbolo + " en la linea: " + simboloAtributos.getPosicion();
+                String error = "Se esta tratando de declarar con otro valor la variable: " + simbolo + " en la linea: "+numeroRenglon+"."+
+                                " Varible anteriormente declarada en la linea: "+ simboloAtributos.getPosicion();
                 listaErroresSemanticos.add(error);
                 System.out.print(error);
 
@@ -122,6 +119,11 @@ public class AnalizadorSemantico {
         var = var.replaceAll("\\s", "");
         if (tablaSimbolos.containsKey(var)) {
             tipo = tablaSimbolos.get(var).getTipo();
+        }
+        else{
+            String error = "La variable " + var + " no ha sido declarada aún (Su valor es null)";
+            listaErroresSemanticos.add(error);
+            System.out.println(error);
         }
 
 
@@ -186,7 +188,7 @@ public class AnalizadorSemantico {
             tipoAsigando = tipoOperandos;
 
         if (!(tipo.equals(tipoOperandos) || tipo.equals(tipoConstantes))) {
-            String error = "Se intentó asiganar un tipo de dato [" + tipoAsigando + "] en la varibale [" + var + "] de tipo [" + tipo + "]. Error en la linea: " + numeroRenglon;
+            String error = "Se intentó asignar un tipo de dato [" + tipoAsigando + "] en la varibale [" + var + "] de tipo [" + tipo + "]. Error en la linea: " + numeroRenglon;
             listaErroresSemanticos.add(error);
             System.out.println(error);
         }
@@ -195,9 +197,9 @@ public class AnalizadorSemantico {
                 tablaSimbolos.get(var).setValor(valor);
             else
                 tablaSimbolos.get(var).setValor("Sin valor");
-            listaErroresSemanticos.add("La variable " + var + " no ha sido declarada aún (Su valor es null)");
+
         }
-        System.out.println(var + ": " + tablaSimbolos.get(var).getValor());
+        //System.out.println(var + ": " + tablaSimbolos.get(var).getValor());
 
     }
 
@@ -263,5 +265,9 @@ public class AnalizadorSemantico {
 
     public HashMap<String, TablaSimbolo> getTablaSimbolos() {
         return tablaSimbolos;
+    }
+
+    public ArrayList<String> getListaErroresSemanticos() {
+        return listaErroresSemanticos;
     }
 }

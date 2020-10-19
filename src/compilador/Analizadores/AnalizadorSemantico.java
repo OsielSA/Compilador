@@ -49,6 +49,8 @@ public class AnalizadorSemantico {
         listaRenglones = texto.split("\n");
 
         for (int i=0; i<listaRenglones.length; i++){
+            if(listaRenglones[i].equals(""))
+                continue;
             String accion;
             accion = validarTipoAccion(listaRenglones[i]);
             if(accion.equals("declaración")){
@@ -60,7 +62,7 @@ public class AnalizadorSemantico {
         }
 
         //-Recorrer/immprimir la tabla de simbolos
-        //-Imprimir los erroree
+        //-Imprimir los errores
 
     }
     public String  validarTipoAccion(String renglon){
@@ -72,7 +74,7 @@ public class AnalizadorSemantico {
             arrTokens.add(tokens.nextToken());
         }
         //Validar si es una declaración, si inicia con algún tipo de dato(int, char, boolean).
-        if(arrTokens.get(0).equals("int") || arrTokens.get(0).equals("char") || arrTokens.get(0).equals("boolean") || arrTokens.get(0).equals("float"))
+        if( arrTokens.get(0).equals("int") || arrTokens.get(0).equals("char") || arrTokens.get(0).equals("boolean") || arrTokens.get(0).equals("float"))
             return "declaración"; //Asignar a respuesta "declaracion".
 
         if(renglon.indexOf('=') > -1) //Validar si es una asignación/Operación(Teniendo el signo igual.
@@ -170,14 +172,14 @@ public class AnalizadorSemantico {
                 System.out.println(error);
             }
         }
-        validarTipodeDatosOperandos(atributoSimbolos, numeroRenglon);
-        //validarTipodeDatosCostantes(atributoSimbolos, );
-        validarTipoOperadores(atributoSimbolos, operadores, numeroRenglon);
-        /*-
-            -Termina iteración
+        if(atributoSimbolos.size() > 0)
+            validarTipodeDatosOperandos(atributoSimbolos, numeroRenglon);
+        validarTipodeDatosCostantes(atributoSimbolos, listaConstantes, numeroRenglon);
+        if( atributoSimbolos.size() > 0 && operadores.size() > 0)
+            validarTipoOperadores(atributoSimbolos, operadores, numeroRenglon);
+        /*  -Termina iteración
             -Mandar llamar la funcion validarTipodeDatosCostantes enviandole la lista de los atributos.
         */
-
     }
 
     public TablaSimbolo obtenerDatosSimbolo(String simbolo){
@@ -200,18 +202,31 @@ public class AnalizadorSemantico {
         return true;
     }
 
-    public void validarTipodeDatosCostantes(ArrayList<TablaSimbolo> atributo,ArrayList<String> listaConstantes){
+    public void validarTipodeDatosCostantes(ArrayList<TablaSimbolo> atributos,ArrayList<String> listaConstantes, int numeroRenglon){
         /*
             -Realizar iteracion de contastes.
             -Validar que exista el tipo de dato de la constante dentro de los atributos de los simbolos.
             -Si no existe
                 -Grabar en la tabla de errores que hay inconcistencias entre tipos.
         */
+        String tipoAnterior = null;
+        for(int i=0; i<atributos.size();i++){
+            if(tipoAnterior == null)
+                tipoAnterior = atributos.get(i).getTipo();
+            else
+            if(!atributos.get(i).getTipo().equals(tipoAnterior)){
+                String error = "Existe incompatibilidad de tipo. Error en la linea " + numeroRenglon;
+                System.out.println(error);
+                listaErroresSemanticos.add(error);
+                return;
+            }
+        }
+        return;
     }
 
     public void validarTipoOperadores(ArrayList<TablaSimbolo> atributo, ArrayList<String> operadoresRenglon, int numeroRenglon){
         String tipo = atributo.get(0).getTipo();
-        if(tipo.equals("boolean")){ //Lógico
+        if(tipo.equals("boolean") || tipo.equals("char")){ //Lógico
             for (int i=0; i<operadoresRenglon.size() ; i++) {
                 if(!operadoreslogicos.contains(operadoresRenglon.get(i))) {
                     String error = "El operador " + operadoresRenglon.get(i) + " no coincide con  el tipo de dato. Error en la linea: " + numeroRenglon;

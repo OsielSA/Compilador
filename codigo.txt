@@ -2,5 +2,6 @@ public class hola {
 	int a1
 	int a2
 	char b1
-	a1 = a2 < a1
+	a1 = a2 || a1 
+
 }

@@ -154,7 +154,12 @@ public class CompiladorView extends JFrame{
                     datos[cont][0] = tab.getValue().getSimbolo();
                     datos[cont][1] = tab.getValue().getTipo();
                     datos[cont][2] = tab.getValue().getPosicion();
-                    datos[cont][3] = tab.getValue().getValor();
+                    String valor = tab.getValue().getValor();
+                    if(valor == null){
+                        datos[cont][3] = "null";
+                    }else {
+                        datos[cont][3] = tab.getValue().getValor();
+                    }
                     cont++;
                 }
                 return datos;

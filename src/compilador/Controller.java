@@ -32,12 +32,13 @@ public class Controller implements ActionListener {
         if (e.getSource() == v.btnCompilar) {
             v.generarArchivo();
             v.compilar();
+            v.btnTablaSimbolos.setEnabled(true);
             return;
         }
 
         if(e.getSource() == v.btnTablaSimbolos){
 
-
+            return;
         }
 
         JFileChooser chooser = new JFileChooser();

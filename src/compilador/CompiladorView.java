@@ -58,6 +58,7 @@ public class CompiladorView extends JFrame{
 
         btnTablaSimbolos = new JButton("Tabla de simbolos");
         btnTablaSimbolos.setBounds(263, 5, 150, 40);
+        btnTablaSimbolos.setEnabled(false);
 
         btnCerrar = new JButton("X");
         btnCerrar.setBounds(940, 5, 40, 40);

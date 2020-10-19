@@ -118,6 +118,14 @@ public class AnalizadorSemantico {
         ArrayList<TablaSimbolo> atributoSimbolos = new ArrayList<>();
         ArrayList<String> listaConstantes = new ArrayList<>();
 
+        String tipo = "";
+        String var = renglon.substring(0, renglon.indexOf('='));
+        var = var.replaceAll("\\s","");
+        if(tablaSimbolos.containsKey(var)){
+            tipo = tablaSimbolos.get(var).getTipo();
+        }
+
+
         String aux = renglon.substring(renglon.indexOf('=') + 1);
         ArrayList<String> operandos = new ArrayList<>();
         ArrayList<String> operadores = new ArrayList<>();
@@ -134,23 +142,19 @@ public class AnalizadorSemantico {
 
             if(!(isOperador)) {
                 if(token.substring(0,1).equals("\'") && token.substring(token.length()-1).equals("\'") && token.length() <= 3){
-                    System.out.println("Es char: " + token);
                     listaConstantes.add("char");
                 }
                 else if(token.equals("true") || token.equals("false")){
-                        System.out.println("Es boolean: " + token);
                         listaConstantes.add("boolean");
                 }
                 else{
                     try{
                         if(token.indexOf(".") == -1){
                             int aux1 = Integer.parseInt(token);
-                            System.out.println("Es int: " + token);
                             listaConstantes.add("int");
                         }
                         else{
                             float aux2 = Float.parseFloat(token);
-                            System.out.println("Es float: " + token);
                             listaConstantes.add("float");
                         }
                     }catch (Exception e){
@@ -172,21 +176,24 @@ public class AnalizadorSemantico {
                 System.out.println(error);
             }
         }
-        if(atributoSimbolos.size() > 0)
-            validarTipodeDatosOperandos(atributoSimbolos, numeroRenglon);
-        validarTipodeDatosCostantes(atributoSimbolos, listaConstantes, numeroRenglon);
-        if( atributoSimbolos.size() > 0 && operadores.size() > 0)
+        String tipoOperandos = validarTipodeDatosOperandos(atributoSimbolos, numeroRenglon);
+        String tipoConstantes = validarTipodeDatosCostantes(atributoSimbolos, listaConstantes, numeroRenglon);
+        if(!atributoSimbolos.isEmpty())
             validarTipoOperadores(atributoSimbolos, operadores, numeroRenglon);
-        /*  -Termina iteración
-            -Mandar llamar la funcion validarTipodeDatosCostantes enviandole la lista de los atributos.
-        */
+
+        if(!(tipo.equals(tipoOperandos) || tipo.equals(tipoConstantes))){
+            String error = " .Error en la linea: " + numeroRenglon;
+            listaErroresSemanticos.add(error);
+            System.out.println(error);
+        }
+
     }
 
     public TablaSimbolo obtenerDatosSimbolo(String simbolo){
         return tablaSimbolos.get(simbolo);
     }
 
-    public boolean validarTipodeDatosOperandos(ArrayList<TablaSimbolo> atributos, int numeroRenglon){
+    public String validarTipodeDatosOperandos(ArrayList<TablaSimbolo> atributos, int numeroRenglon){
         String tipoAnterior = null;
         for(int i=0; i<atributos.size();i++){
             if(tipoAnterior == null)
@@ -196,32 +203,26 @@ public class AnalizadorSemantico {
                     String error = "Existe incompatibilidad de tipo. Error en la linea " + numeroRenglon;
                     System.out.println(error);
                     listaErroresSemanticos.add(error);
-                    return false;
+                    return null;
                 }
         }
-        return true;
+        return tipoAnterior;
     }
 
-    public void validarTipodeDatosCostantes(ArrayList<TablaSimbolo> atributos,ArrayList<String> listaConstantes, int numeroRenglon){
-        /*
-            -Realizar iteracion de contastes.
-            -Validar que exista el tipo de dato de la constante dentro de los atributos de los simbolos.
-            -Si no existe
-                -Grabar en la tabla de errores que hay inconcistencias entre tipos.
-        */
+    public String validarTipodeDatosCostantes(ArrayList<TablaSimbolo> atributos,ArrayList<String> listaConstantes, int numeroRenglon){
         String tipoAnterior = null;
-        for(int i=0; i<atributos.size();i++){
+        for(int i=0; i<listaConstantes.size();i++){
             if(tipoAnterior == null)
-                tipoAnterior = atributos.get(i).getTipo();
+                tipoAnterior = listaConstantes.get(i);
             else
-            if(!atributos.get(i).getTipo().equals(tipoAnterior)){
+            if(!listaConstantes.get(i).equals(tipoAnterior)){
                 String error = "Existe incompatibilidad de tipo. Error en la linea " + numeroRenglon;
                 System.out.println(error);
                 listaErroresSemanticos.add(error);
-                return;
+                return null;
             }
         }
-        return;
+        return tipoAnterior;
     }
 
     public void validarTipoOperadores(ArrayList<TablaSimbolo> atributo, ArrayList<String> operadoresRenglon, int numeroRenglon){

@@ -1,15 +1,13 @@
 package compilador;
 
-import compilador.Analizadores.AnalizadorLexico;
 import compilador.Analizadores.AnalizadorSemantico;
-import compilador.Analizadores.AnalizadorSintactico;
+import compilador.Analizadores.CodigoIntermedio;
 
 import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,6 +17,7 @@ import javax.swing.*;
 public class CompiladorView extends JFrame{
 
     public AnalizadorSemantico analizadorSemantico;
+    public CodigoIntermedio codigoIntermedio;
 
     public static JTextArea area, consola;
     public JButton btnCompilar, btnAbrir, btnTablaSimbolos, btnCerrar;
@@ -95,21 +94,8 @@ public class CompiladorView extends JFrame{
             return;
         }
 
-        //AnalizadorLexico analizadorLexico = new AnalizadorLexico("codigo.txt");
-        //ArrayList<String> erroresLexicos = analizadorLexico.getErroresLexicos();
-        
         consola.setText("");
 
-        /*for (int i = 0; i < erroresLexicos.size(); i++) {
-            consola.append(erroresLexicos.get(i) + "\n");
-        }*/
-
-        /*AnalizadorSintactico analizadorSintactico = null;
-        if (!analizadorLexico.getHayErrores()) {
-            analizadorSintactico = new AnalizadorSintactico(analizadorLexico.getTokenRC());
-        }*/
-
-        //if (!analizadorSintactico.getHayErrores()){
         analizadorSemantico = new AnalizadorSemantico(area.getText());
         ArrayList<String> listaErroresSemanticos = analizadorSemantico.getListaErroresSemanticos();
         if(listaErroresSemanticos.isEmpty())
@@ -120,18 +106,27 @@ public class CompiladorView extends JFrame{
                 consola.setText(consola.getText() + "\n" + listaErroresSemanticos.get(i));
             }
         }
-        //}
+
+        codigoIntermedio = new CodigoIntermedio( hasMapToArrayList(analizadorSemantico.getTablaSimbolos()));
+
     }
 
+    public ArrayList<Simbolo> hasMapToArrayList( HashMap<String, Simbolo> hm){
+        ArrayList<Simbolo> listaSimbolos = new ArrayList<>();
+        for(Map.Entry<String, Simbolo> tab: hm.entrySet()) {
+            listaSimbolos.add(tab.getValue());
+        }
+        return listaSimbolos;
+    }
     public void mostrarTablaSimbolos(){
 
         class TablaSimb extends JDialog {
             private JTable tabla;
-            private HashMap<String,TablaSimbolo> hm;
+            private HashMap<String, Simbolo> hm;
             private JScrollPane sPane;
 
 
-            TablaSimb(JFrame padre, HashMap<String,TablaSimbolo> hm) {
+            TablaSimb(JFrame padre, HashMap<String, Simbolo> hm) {
                 super(padre,"Tabla de Símbolos",false);
 
                 this.tabla = tabla;
@@ -159,7 +154,7 @@ public class CompiladorView extends JFrame{
                 Object [][] datos= new Object[hm.size()][4];
                 int cont=0;
 
-                for(Map.Entry<String,TablaSimbolo> tab: hm.entrySet()) {
+                for(Map.Entry<String, Simbolo> tab: hm.entrySet()) {
                     datos[cont][0] = tab.getValue().getSimbolo();
                     datos[cont][1] = tab.getValue().getTipo();
                     datos[cont][2] = tab.getValue().getPosicion();
@@ -176,6 +171,7 @@ public class CompiladorView extends JFrame{
         }
 
         new TablaSimb(this, analizadorSemantico.getTablaSimbolos());
+
     }
 
     class PanelGradiente extends JPanel {

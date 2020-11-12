@@ -1,15 +1,15 @@
 package compilador;
 
-public class TablaSimbolo {
+public class Simbolo {
     private String simbolo;
     private String rol;
     private String tipo;
     private int posicion;
     private String valor;
 
-    public TablaSimbolo(){};
+    public Simbolo(){};
 
-    public TablaSimbolo(String simbolo, /*String rol,*/ String tipo, int posicion, String valor){
+    public Simbolo(String simbolo, /*String rol,*/ String tipo, int posicion, String valor){
         this.simbolo = simbolo;
         //this.rol = rol;
         this.tipo = tipo;

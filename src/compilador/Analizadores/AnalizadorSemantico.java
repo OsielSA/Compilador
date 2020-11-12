@@ -1,14 +1,13 @@
 package compilador.Analizadores;
 
-import compilador.TablaSimbolo;
+import compilador.Simbolo;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class AnalizadorSemantico {
-    private HashMap<String, TablaSimbolo> tablaSimbolos;
+    private HashMap<String, Simbolo> tablaSimbolos;
     private ArrayList<String> listaErroresSemanticos;
 
     private ArrayList<String> operadoresaritmeticos; //Llenarlos
@@ -87,9 +86,9 @@ public class AnalizadorSemantico {
             String tipo = tokens.nextToken();
             String simbolo = tokens.nextToken();
             if (!encontrarSimbolo(simbolo)) {
-                tablaSimbolos.put(simbolo, new TablaSimbolo(simbolo, tipo, numeroRenglon, null));
+                tablaSimbolos.put(simbolo, new Simbolo(simbolo, tipo, numeroRenglon, null));
             } else {
-                TablaSimbolo simboloAtributos = tablaSimbolos.get(simbolo);
+                Simbolo simboloAtributos = tablaSimbolos.get(simbolo);
 
                 String error = "Se esta tratando de declarar con otro valor la variable: " + simbolo + " en la linea: "+numeroRenglon+"."+
                                 " Varible anteriormente declarada en la linea: "+ simboloAtributos.getPosicion();
@@ -111,7 +110,7 @@ public class AnalizadorSemantico {
     }
 
     public void validarOperacion(String renglon, int numeroRenglon) {
-        ArrayList<TablaSimbolo> atributoSimbolos = new ArrayList<>();
+        ArrayList<Simbolo> atributoSimbolos = new ArrayList<>();
         ArrayList<String> listaConstantes = new ArrayList<>();
 
         String tipo = "", valor = null;
@@ -128,6 +127,8 @@ public class AnalizadorSemantico {
 
 
         String aux = renglon.substring(renglon.indexOf('=') + 1);
+
+
         ArrayList<String> operandos = new ArrayList<>();
         ArrayList<String> operadores = new ArrayList<>();
 
@@ -192,6 +193,7 @@ public class AnalizadorSemantico {
             listaErroresSemanticos.add(error);
             System.out.println(error);
         }
+        valor = renglon.substring(renglon.indexOf('=') + 1);
         if (listaErroresSemanticos.isEmpty()) {
             if (valor != null)
                 tablaSimbolos.get(var).setValor(valor);
@@ -203,11 +205,11 @@ public class AnalizadorSemantico {
 
     }
 
-    public TablaSimbolo obtenerDatosSimbolo(String simbolo) {
+    public Simbolo obtenerDatosSimbolo(String simbolo) {
         return tablaSimbolos.get(simbolo);
     }
 
-    public String validarTipodeDatosOperandos(ArrayList<TablaSimbolo> atributos, int numeroRenglon) {
+    public String validarTipodeDatosOperandos(ArrayList<Simbolo> atributos, int numeroRenglon) {
         String tipoAnterior = null;
         for (int i = 0; i < atributos.size(); i++) {
             if (tipoAnterior == null)
@@ -222,7 +224,7 @@ public class AnalizadorSemantico {
         return tipoAnterior;
     }
 
-    public String validarTipodeDatosCostantes(ArrayList<TablaSimbolo> atributos, ArrayList<String> listaConstantes, int numeroRenglon) {
+    public String validarTipodeDatosCostantes(ArrayList<Simbolo> atributos, ArrayList<String> listaConstantes, int numeroRenglon) {
         String tipoAnterior = null;
         for (int i = 0; i < listaConstantes.size(); i++) {
             if (tipoAnterior == null)
@@ -237,7 +239,7 @@ public class AnalizadorSemantico {
         return tipoAnterior;
     }
 
-    public void validarTipoOperadores(ArrayList<TablaSimbolo> atributo, ArrayList<String> operadoresRenglon, int numeroRenglon) {
+    public void validarTipoOperadores(ArrayList<Simbolo> atributo, ArrayList<String> operadoresRenglon, int numeroRenglon) {
         String tipo = atributo.get(0).getTipo();
         if (tipo.equals("boolean") || tipo.equals("char")) { //Lógico
             for (int i = 0; i < operadoresRenglon.size(); i++) {
@@ -263,7 +265,7 @@ public class AnalizadorSemantico {
         }
     }
 
-    public HashMap<String, TablaSimbolo> getTablaSimbolos() {
+    public HashMap<String, Simbolo> getTablaSimbolos() {
         return tablaSimbolos;
     }
 

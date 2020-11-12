@@ -5,11 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/codigo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/Analizadores/AnalizadorSemantico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compilador/compilador/Analizadores/AnalizadorSemantico.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorView$1TablaSimb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorView$1TablaSimb.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorView$PanelGradiente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorView$PanelGradiente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compilador/compilador/CompiladorView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compilador/Analizadores/AnalizadorSemantico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/Analizadores/AnalizadorSemantico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compilador/CompiladorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/CompiladorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compilador/TablaSimbolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compilador/Simbolo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Compilador" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="compilador.Main" />
       <module name="Compilador" />
       <extension name="coverage">
@@ -86,13 +91,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Compilador" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,11 +136,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601856338504" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1603084678584">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1605154648614">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602964889833" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603084678584" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605154648614" />
     <state x="499" y="162" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1602916991252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -151,26 +149,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="450" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1603071919715" />
-    <state width="1493" height="148" key="GridCell.Tab.0.bottom" timestamp="1603085388079">
+    <state width="1493" height="133" key="GridCell.Tab.0.bottom" timestamp="1605154792292">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
-    <state width="1493" height="148" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603085388079" />
-    <state width="1493" height="148" key="GridCell.Tab.0.center" timestamp="1603085388079">
+    <state width="1493" height="133" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605154792292" />
+    <state width="1493" height="133" key="GridCell.Tab.0.center" timestamp="1605154792292">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
-    <state width="1493" height="148" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603085388079" />
-    <state width="1493" height="148" key="GridCell.Tab.0.left" timestamp="1603085388078">
+    <state width="1493" height="133" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605154792292" />
+    <state width="1493" height="133" key="GridCell.Tab.0.left" timestamp="1605154792292">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
-    <state width="1493" height="148" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603085388078" />
-    <state width="1493" height="148" key="GridCell.Tab.0.right" timestamp="1603085388079">
+    <state width="1493" height="133" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605154792292" />
+    <state width="1493" height="133" key="GridCell.Tab.0.right" timestamp="1605154792292">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1602965245902" />
-    <state width="1493" height="148" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603085388079" />
+    <state width="1493" height="133" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605154792292" />
     <state width="1493" height="192" key="GridCell.Tab.1.bottom" timestamp="1603072696753">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
